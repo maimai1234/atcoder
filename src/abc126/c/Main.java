@@ -11,23 +11,16 @@ public class Main {
         int N = sc.nextInt();
         int K = sc.nextInt();
 
-        float count = 0;
-        float tmp01 = 0;
+        double count = 0;
 
-        if(K < N){
-            tmp01 = (1 / N) * (N - K + 1);
-        }
-
-        // number
         for(int i=1; i <= N; i++){
-            float tmp02 = 1f;
+            double tmp02 = 1;
 
             for(int n=i; n < K; n=n*2){
-                tmp02 = tmp02 * 0.5f;
+                tmp02 = tmp02 * 0.5;
             }
             count = count + tmp02 / N;
         }
-        count = count + tmp01;
         System.out.print(count);
     }
 

@@ -8,10 +8,8 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        //int N = sc.nextInt();
-        //int K = sc.nextInt();
-
         String S = sc.next();
+        sc.close();
 
         String first = S.substring(0,2);
         String end = S.substring(2,4);
