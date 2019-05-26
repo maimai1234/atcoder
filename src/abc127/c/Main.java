@@ -10,17 +10,28 @@ public class Main {
 
         int N = sc.nextInt();
         int M = sc.nextInt();
-        int[] L = new int[M];
-        int[] R = new int[M];
-        for (int i=0; i < M; i++){
-            L[i] = sc.nextInt();
-            R[i] = sc.nextInt();
+
+        int left=0, right=2147483647;
+
+        int l, r;
+        for (int i=0; i<M; i++){
+            l = sc.nextInt();
+            r = sc.nextInt();
+            if (l > left){
+                left = l;
+            }
+            if (r < right){
+                right = r;
+            }
         }
         sc.close();
 
+        int result=0;
+        if(left <= right){
+            result = right - left + 1;
+        }
 
-
-        System .out.println();
+        System .out.println(result);
 
     }
 
